@@ -20,3 +20,6 @@
       UMASK: 002
       DISPLAY_WIDTH: 1600
       DISPLAY_HEIGHT: 960
+      
+   networks:
+      casanet:
