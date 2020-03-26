@@ -1,3 +1,6 @@
+version: '3'
+services:
+
 # Picard - Music Library Tagging and Management
   picard:
     image: mikenye/picard
