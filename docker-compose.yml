@@ -5,7 +5,7 @@
     hostname: picard
     restart: unless-stopped
     networks:
-      - t2_proxy
+      - casanet
     ports:
       - "5800:5800"
     volumes:
