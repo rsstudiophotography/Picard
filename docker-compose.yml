@@ -1,0 +1,22 @@
+# Picard - Music Library Tagging and Management
+  picard:
+    image: mikenye/picard
+    container_name: picard
+    hostname: picard
+    restart: unless-stopped
+    networks:
+      - t2_proxy
+    ports:
+      - "5800:5800"
+    volumes:
+      - /volume1/server_casa/descargas/musica:/wip_media:rw
+      - /volume1/docker/picard:/config:rw
+      - /volume1/server_casa/renombradas/musica:/music:rw
+      - /dev/shm:/dev/shm
+    environment:
+      USER_ID: ${PUID}
+      GROUP_ID: ${PGID}
+      TZ: ${TZ}
+      UMASK: 002
+      DISPLAY_WIDTH: 1600
+      DISPLAY_HEIGHT: 960
